@@ -51,6 +51,11 @@ app.post('/api/register', async (req, res) => {
     })
 }
 
-app.listen(port,()=>{
-    console.log(`App running on port ${port}`);
+app.get("/",(req,res)=>{
+    res.send("Welcome to foodsy")
+})
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT,()=>{
+    console.log(`App running on port ${PORT}`);
 });
